@@ -1,0 +1,28 @@
+img.logo-header{
+    margin-top: -20px;
+    width: 100px;
+    height: 100px;
+}
+
+img.logo-redes-header{
+    margin-top: 40px;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.redes-header{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+div.menu-header{
+    position: absolute;
+    margin-top: 40px;
+    left: 50%;
+}
+
+div.logo-position{
+    position: relative;
+    top: 40%;
+}
