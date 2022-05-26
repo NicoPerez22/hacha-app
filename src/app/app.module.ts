@@ -11,11 +11,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContentComponent } from './components/content/content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
+
   { path: 'auth',  component: AuthComponent },
   { path: 'auth/login', component: LoginComponent },
-  { path: 'auth/register', component: RegisterComponent }
+  { path: 'auth/register', component: RegisterComponent },
+
+  { path: 'home', component: HomeComponent },
 ]
 
 @NgModule({
@@ -25,7 +30,8 @@ const routes: Routes = [
     FooterComponent,
     AuthComponent,
     RegisterComponent,
-    ContentComponent
+    ContentComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

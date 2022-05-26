@@ -42,7 +42,6 @@ export class RegisterComponent implements OnInit {
     const formModel = this.userForm.value;
 
     const saveUserModel = {
-      id: 0,
       username: formModel.username,
       email: formModel.email,
       password: formModel.password
