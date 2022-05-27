@@ -1,0 +1,7 @@
+/* Tu imagen */
+.img {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    max-width: 100%;
+}
