@@ -1,0 +1,32 @@
+.titulo-competencia{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.nombre-equipo{
+    font-size: 6px;
+}
+
+.card{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #30155a;
+    color: white;
+}
+
+.card-fecha{
+    margin-top: -14px;
+    font-size: 10px;
+}
+
+.logo-team{
+    margin-top: -15px;
+}
+
+.name-team{
+    font-size: 8px;
+}

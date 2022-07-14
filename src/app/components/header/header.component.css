@@ -1,6 +1,5 @@
 img.logo-header{
-    margin-top: -20px;
-    width: 100px;
+    width: 130px;
     height: 100px;
 }
 
@@ -25,4 +24,21 @@ div.menu-header{
 div.logo-position{
     position: relative;
     top: 40%;
+}
+
+.fondo {
+    opacity: 100%;
+    /* background-color: rgb(83, 10, 10); */
+    background-color: #133153;
+}
+
+.bar-nav-social{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: transparent;
+}
+
+.font-nav{
+    font-size: 12px;
+    margin-right: 10px;
 }

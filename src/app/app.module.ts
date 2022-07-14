@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContentComponent } from './components/content/content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
+import { MatchEventsComponent } from './pages/home/match-events/match-events.component';
+import { TablePositionComponent } from './pages/home/table-position/table-position.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +33,9 @@ const routes: Routes = [
     AuthComponent,
     RegisterComponent,
     ContentComponent,
-    HomeComponent
+    HomeComponent,
+    MatchEventsComponent,
+    TablePositionComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
