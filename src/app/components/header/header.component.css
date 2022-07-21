@@ -4,10 +4,22 @@ img.logo-header{
 }
 
 img.logo-redes-header{
-    margin-top: 40px;
-    width: 30px;
-    height: 30px;
-    
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: -20px;
+}
+
+.font-social{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+}
+
+.margin-social{
+    margin-left: -100px;
+    margin-right: -100px;
 }
 
 .redes-header{
@@ -15,10 +27,10 @@ img.logo-redes-header{
     padding-right: 100px;
 }
 
-div.menu-header{
-    position: absolute;
+.menu-header{
     margin-top: 40px;
-    left: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 div.logo-position{
@@ -41,4 +53,11 @@ div.logo-position{
 .font-nav{
     font-size: 12px;
     margin-right: 10px;
+    background-color: transparent;
+    color: white;
+    border: transparent;
+}
+
+.btn-login{
+    background-color: #133153;
 }

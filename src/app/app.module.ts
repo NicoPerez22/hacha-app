@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { MatchEventsComponent } from './pages/home/match-events/match-events.component';
 import { TablePositionComponent } from './pages/home/table-position/table-position.component';
+import { CreateTournamentComponent } from './pages/create-tournament/create-tournament.component';
+import { FormTornaumentComponent } from './pages/create-tournament/form-tornaument/form-tornaument.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,6 +25,7 @@ const routes: Routes = [
   { path: 'auth/register', component: RegisterComponent },
 
   { path: 'home', component: HomeComponent },
+  { path: 'crear-torneo', component: CreateTournamentComponent },
 ]
 
 @NgModule({
@@ -35,7 +38,9 @@ const routes: Routes = [
     ContentComponent,
     HomeComponent,
     MatchEventsComponent,
-    TablePositionComponent
+    TablePositionComponent,
+    CreateTournamentComponent,
+    FormTornaumentComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

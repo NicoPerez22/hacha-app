@@ -1,0 +1,105 @@
+<div>
+    <br>
+    <br>
+    <h4 style="color:white ;">Crear Torneo</h4>
+    <br>
+    <br>
+</div>
+
+<form [formGroup]="torneoForm">
+    <div class="container">
+        <div class="row">
+            <div class="col mb-3">
+                <label style="color:white ;" for="exampleFormControlInput1" class="form-label">Nombre del torneo</label>
+                <input formControlName="nombreTorneo" type="text" class="form-control" id="exampleFormControlInput1">
+            </div>
+        
+            <div class="col mb-3">
+                <label style="color:white ;" for="exampleFormControlTextarea1" class="form-label">Formato</label>
+                <select formControlName="formatoTorneo" class="form-control" id="exampleFormControlTextarea1" rows="3">
+                    <option value="0" selected disabled>Seleccione formato</option>
+                    <option *ngFor="let f of formatos" [value]="f.id">{{f.nombre}}</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col mb-6">
+                <label style="color:white ;" for="exampleFormControlInput1" class="form-label">Numero de equipos</label>
+                <select formControlName="cantidadEquipos" class="form-control" id="exampleFormControlTextarea1" rows="3">
+                    <option value="0" selected disabled>Seleccione cantidad</option>
+                    <option *ngFor="let f of numEquipos" [value]="f.id">{{f.nombre}}</option>
+                </select>
+            </div>
+
+            <div class="col mb-6">
+                <label style="color:white ;" for="exampleFormControlInput1" class="form-label">Tipo de Sorteo</label>
+                <select formControlName="tipoSorteo" class="form-control" id="exampleFormControlTextarea1" rows="3">
+                    <option value="0" selected disabled>Seleccione cantidad</option>
+                    <option *ngFor="let f of sorteos" [value]="f.id">{{f.nombre}}</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <hr style="color: white;">
+        <br>
+
+        <div>
+            <h4 style="color:white ;">Seleccion de equipos</h4>
+            <br><br>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="col mb-6">
+                    <label style="color:white ;" for="exampleFormControlInput1" class="form-label">Nacionalidad de equipos</label>
+                    <select formControlName="tipoSorteo" class="form-control" id="exampleFormControlTextarea1" rows="3">
+                        <option value="0" selected disabled>Seleccione cantidad</option>
+                        <option *ngFor="let f of nacionalidadEquipos" [value]="f.id">{{f.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col mb-6">
+                    <label style="color:white ;" for="exampleFormControlInput1" class="form-label">Equipos</label>
+                    <select #team (change)="agregarEquipo(team.value)" formControlName="tipoSorteo" class="form-control" id="exampleFormControlTextarea1" rows="3">
+                        <option value="0" selected disabled>Seleccione cantidad</option>
+                        <option *ngFor="let f of equipos" [value]="f.id">{{f.nombre}}</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div *ngIf="mostrarTabla">
+            <br><br><br>
+            <table class="table" style="color:white ;">
+                <thead>
+                  <tr>
+                    <th scope="col">N</th>
+                    <th scope="col">Equipo</th>
+                    <th scope="col">Nacionalidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let equipo of arrayTorneo">
+                  <tr>
+                    <th scope="row">{{cantEquipos}}</th>
+                    <td>{{equipo.nombre}}</td>
+                    <td>{{equipo.nacionalidad}}</td>
+                    <td><button class="btn-error"><i class="fa-solid fa-trash"></i></button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div>
+            <br><br><br>
+            <button class="btn-success" (click)="onSubmit()">Crear Torneo</button>
+            <br><br>        
+        </div>
+    </div>
+</form>
+
